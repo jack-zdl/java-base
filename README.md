@@ -1,10 +1,10 @@
 # java-base
 主要来写java基础和整合设计模式，
 这是一篇自由练习的java学习开源项目，为了让大家更加系统掌握java学习，更快速成长在大牛的道路上，看看你我要学习多少基础的东西。来和我一起学习吧。 基础知识包括：
-##1 基本语法： 
-	###1.1static的意义
-	###1.2volatile关键字的底层实现原理。等一些基础的知识。 
-##2容器：包括一些集合set list map，集合要掌握的是ArrayList、LinkedList、Hashtable、HashMap、ConcurrentHashMap、HashSet的实现原理。 
+## 1 基本语法： 
+	### 1.1static的意义
+	### 1.2volatile关键字的底层实现原理。等一些基础的知识。 
+## 2容器：包括一些集合set list map，集合要掌握的是ArrayList、LinkedList、Hashtable、HashMap、ConcurrentHashMap、HashSet的实现原理。 
 	###2.1ConcurrentHashMap的锁分段技术 
 	###2.2ConcurrentHashMap的读是否要加锁，为什么 
 	###2.3ConcurrentHashMap的迭代器是强一致性的迭代器还是弱一致性的迭代器 
