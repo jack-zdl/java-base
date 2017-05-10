@@ -33,7 +33,11 @@
 
 >   2容器：包括一些集合set list map，集合要掌握的是ArrayList、LinkedList、
 	Hashtable、HashMap、ConcurrentHashMap、HashSet的实现原理。 
-	
+###  数组和链表 array list
+```
+数组创建就固定了长度，不能改变长度，但是连接长度可以改变，可以动态增加节点数据。
+所以数组查询比较方便，链表的修改比较方便。
+```
 		2.1ConcurrentHashMap的锁分段技术 
 		2.2ConcurrentHashMap的读是否要加锁，为什么 
 		2.3ConcurrentHashMap的迭代器是强一致性的迭代器还是弱一致性的迭代器 
@@ -64,9 +68,6 @@
 
 		7.1数据结构-数组，链表，栈，队列，树，二叉树
 			7.1.1链表的制作
-```
-				
-```
 		
 		7.2冒泡算法，二分法算法，快速排序，插入排序等。 
 		
