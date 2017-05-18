@@ -57,9 +57,9 @@ public class JavaTestDeadLock implements Runnable {
 		JavaTestDeadLock td2 = new JavaTestDeadLock();
 		td1.flag=1;
 		td2.flag=0;
-		Thread t1 = new Thread(td1);
-		Thread t2 = new Thread(td2);
-		t1.start();
+		Thread t1 = new Thread(td1); //1 新建状态
+		Thread t2 = new Thread(td2); 
+		t1.start();  //2就绪状态  ---3可是执行run()方法时是运行状态-4线程由于各种原因进入阻塞状态a 通过sleep() b IO操作  c 得不到锁 5 死亡状态 run()正常接结束 未捕获异常中止线程
 		t2.start();
 	}
 }
