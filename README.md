@@ -7,7 +7,7 @@
 +	1.1static的意义
 +	1.2volatile关键字的底层实现原理。等一些基础的知识。 
 +	1.3java本身带有的注解
-
++   1.4final finally finlise的区别
 ```
 		@SuppressWarnings("unchecked")
 		告诉编译器忽略 unchecked 警告信息，如使用List，ArrayList等未进行参数化产生的警告信息。
@@ -41,6 +41,22 @@
 		2.1ConcurrentHashMap的锁分段技术 
 		2.2ConcurrentHashMap的读是否要加锁，为什么 
 		2.3ConcurrentHashMap的迭代器是强一致性的迭代器还是弱一致性的迭代器 
+### 数据结构和算法
+```
+数据结构：
+	1 线性表 ：数组，链表，队列，栈
+	线性表中 底层我们可以实现数组因为list中的arraylist就是一个简答的数组，和链表linkedList
+	我们可以基于数组和链表来做成队列和堆栈。
+	队列类：实现了Queue接口的类，如LinkedBlockingQueue，LinkedList。
+	堆栈类：Stack
+		数组：
+	2非线性表：树（二叉树），图，表
+算法：
+	1冒泡排序
+	2快速排序
+	3插入排序
+	等等很多排序算法
+```		
 		
 >   3设计模式：23中设计模式。
  
