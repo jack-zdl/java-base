@@ -41,6 +41,8 @@
 		2.1ConcurrentHashMap的锁分段技术 
 		2.2ConcurrentHashMap的读是否要加锁，为什么 
 		2.3ConcurrentHashMap的迭代器是强一致性的迭代器还是弱一致性的迭代器 
+		2.4HashMap和HashTable的区别：
+		    HashMap是线程不安全的，并且可以接受null值作为他的key和value。
 ### 数据结构和算法
 ```
 数据结构：
