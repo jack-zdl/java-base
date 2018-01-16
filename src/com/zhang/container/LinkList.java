@@ -1,34 +1,34 @@
 package com.zhang.container;
 
 /**@author  zhangdelei
- * @data 2017��3��22������10:03:37
+ * @data 2017??3??22??????10:03:37
  *@Description TODO
  */
 
 public class LinkList {
 	
-	  public Node first; // ����һ��ͷ���  
-	  private int pos = 0;// �ڵ��λ��  
+	  public Node first; // ???????????  
+	  private int pos = 0;// ???????  
 	  
 	     public LinkList() {  
 	           this. first = null;  
 	     }  
 	  
-	     // ����һ��ͷ�ڵ�  
+	     // ???????????  
 	     public void addFirstNode( int data) {  
 	          Node node = new Node(data);  
 	          node. next = first;  
 	          first = node;  
 	     }  
 	  
-	     // ɾ��һ��ͷ���,������ͷ���  
+	     // ??????????,??????????  
 	     public Node deleteFirstNode() {  
 	          Node tempNode = first;  
 	          first = tempNode. next;  
 	          return tempNode;  
 	     }  
 	  
-	     // ������λ�ò���ڵ� ��index�ĺ������  
+	     // ????????ò????? ??index????????  
 	     public void add(int index, int data) {  
 	          Node node = new Node(data);  
 	          Node current = first;  
@@ -43,7 +43,7 @@ public class LinkList {
 	           pos = 0;  
 	     }  
 	  
-	     // ɾ������λ�õĽڵ�  
+	     // ?????????????  
 	     public Node deleteByPos( int index) {  
 	          Node current = first;  
 	          Node previous = first;  
@@ -61,10 +61,10 @@ public class LinkList {
 	           return current;  
 	     }  
 	  
-	     // ���ݽڵ��dataɾ���ڵ�(����ɾ����һ��)  
+	     // ???????data??????(????????????)  
 	     public Node deleteByData( int data) {  
 	          Node current = first;  
-	          Node previous = first; //��ס��һ���ڵ�  
+	          Node previous = first; //???????????  
 	           while (current. data != data) {  
 	               if (current. next == null) {  
 	                    return null;  
@@ -80,7 +80,7 @@ public class LinkList {
 	           return current;  
 	     }  
 	  
-	     // ��ʾ�����еĽڵ���Ϣ  
+	     // ???????????????  
 	     public void displayAllNodes() {  
 	          Node current = first;  
 	           while (current != null) {  
@@ -90,7 +90,7 @@ public class LinkList {
 	          System. out.println();  
 	     }  
 	  
-	     // ����λ�ò��ҽڵ���Ϣ  
+	     // ??????ò????????  
 	     public Node findByPos( int index) {  
 	          Node current = first;  
 	           if ( pos != index) {  
@@ -100,7 +100,7 @@ public class LinkList {
 	           return current;  
 	     }  
 	  
-	     // �������ݲ��ҽڵ���Ϣ  
+	     // ????????????????  
 	     public Node findByData( int data) {  
 	          Node current = first;  
 	           while (current. data != data) {  
