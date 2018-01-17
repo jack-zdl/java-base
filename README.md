@@ -35,6 +35,8 @@
     1 String是不能被继承的，因为被final修饰，详情查询final的用法。
     2 String有二个属性，private final char[] value; private int hash;
     在初建时,String a = new String();建立一个""空字符串。长度hash默认为0,
+    // 程序编译期即加载完成对象s1为"ab"，JVM自有优化， 效率并不差
+    String s1 = "a" + "b";  
 ```
 
 >   2容器：包括一些集合set list map，集合要掌握的是ArrayList、LinkedList、

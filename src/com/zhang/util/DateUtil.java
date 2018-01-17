@@ -14,7 +14,7 @@
  * 评审日期：
  * 发现问题：
  */
-package com.zhang.util.util.DateUtil;
+package com.zhang.util;
 
 
 
@@ -417,7 +417,8 @@ public class DateUtil {
     /**
      * Checkstyle rule: utility classes should not have public constructor
      */
-    public DateUtil() {
+    public
+    DateUtil() {
     }
 
     //Timestamp和String之间转换的函数：
@@ -462,7 +463,7 @@ public class DateUtil {
      * @param aMask the date pattern the string is in
      * @param strDate a string representation of a date
      * @return a converted Date object
-     * @see java.text.SimpleDateFormat
+     * @see SimpleDateFormat
      * @throws ParseException when String doesn't match the expected format
      */
     public static Date convertStringToDate(String aMask, String strDate) throws ParseException {
@@ -506,7 +507,7 @@ public class DateUtil {
      * @param aMask the date pattern the string is in
      * @param aDate a date object
      * @return a formatted string representation of the date
-     * @see java.text.SimpleDateFormat
+     * @see SimpleDateFormat
      */
     public static String getDateTime(String aMask, Date aDate) {
         SimpleDateFormat df = null;

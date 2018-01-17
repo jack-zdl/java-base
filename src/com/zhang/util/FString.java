@@ -1,4 +1,4 @@
-package com.zhang.utils.stringtools;
+package com.zhang.util;
 
 //import org.apache.commons.lang.StringUtils;
 
