@@ -38,6 +38,10 @@
     // 程序编译期即加载完成对象s1为"ab"，JVM自有优化， 效率并不差
     String s1 = "a" + "b";  
 ```
++   1.6 Serializable接口
+```
+    1 序列化问题
+```
 
 >   2容器：包括一些集合set list map，集合要掌握的是ArrayList、LinkedList、
 	Hashtable、HashMap、ConcurrentHashMap、HashSet的实现原理。 

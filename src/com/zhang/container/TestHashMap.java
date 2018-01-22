@@ -14,7 +14,7 @@ public class TestHashMap {
 
 	public void test(){
 		Map<String,Object> hashMap = new HashMap<String,Object>();
-		hashMap.put("key", "1");//���һ��key value
+		hashMap.put("key", "1");//
 		hashMap.get("key");
 
 		
