@@ -12,10 +12,15 @@
 ```
     **基于哈希表的Map接口实现**
     3.1 实现了Map接口的key-value集合，可以允许key和value为null.
-    3.2 非线程安全的map，
+    3.2 非线程安全的map，可以使用Iterator来做线程安全。
     3.3 继承AbstractMap，这个类实现了大部分的Map的方法，避免了继承Map的类都要实现的方法的繁琐。
+        为什么继承AbstractMap，还要继承Map接口。为了Class类的getInterfaces这个方法的确不能获取到父类实现的接口，如果不写上实现Map接口，这个方法返回的数组中就没有Map.class。
+        真实的答案是一个误会而已。
+        链接https://stackoverflow.com/questions/2165204/why-does-linkedhashsete-extend-hashsete-and-implement-sete
            AbstractMap的
               size()方法来测量他的长度。
+              isEmpty()是否为空
+              containsValue()是否包含value的
         Cloneable接口，实现了复制的功能。可以使用clone方法。
     3.4 默认容量static final int DEFAULT_INITIAL_CAPACITY = 1 << 4; 意思是二进制向左移动4位。2^4 = 16
         最大容量2^30.
