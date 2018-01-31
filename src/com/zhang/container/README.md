@@ -10,9 +10,12 @@
 		    HashMap是线程不安全的，并且可以接受null值作为他的key和value。
 ## HashMap
 ```
+    **基于哈希表的Map接口实现**
     3.1 实现了Map接口的key-value集合，可以允许key和value为null.
     3.2 非线程安全的map，
     3.3 继承AbstractMap，这个类实现了大部分的Map的方法，避免了继承Map的类都要实现的方法的繁琐。
+           AbstractMap的
+              size()方法来测量他的长度。
         Cloneable接口，实现了复制的功能。可以使用clone方法。
     3.4 默认容量static final int DEFAULT_INITIAL_CAPACITY = 1 << 4; 意思是二进制向左移动4位。2^4 = 16
         最大容量2^30.
