@@ -14,7 +14,10 @@
     3.1 实现了Map接口的key-value集合，可以允许key和value为null.
     3.2 非线程安全的map，可以使用Iterator来做线程安全。
     3.3 继承AbstractMap，这个类实现了大部分的Map的方法，避免了继承Map的类都要实现的方法的繁琐。
-        为什么继承AbstractMap，还要继承Map接口。为了Class类的getInterfaces这个方法的确不能获取到父类实现的接口，如果不写上实现Map接口，这个方法返回的数组中就没有Map.class。
+    AbstractMap是 HashMap, TreeMap, ConcurrentHashMap 等类的父类。
+        只有一个抽象方法 abstract Set<Entry<K,V>> entrySet();
+        为什么继承AbstractMap，还要继承Map接口。为了Class类的getInterfaces这个方法的确不能获取到父类实现的接口，
+        如果不写上实现Map接口，这个方法返回的数组中就没有Map.class。
         真实的答案是一个误会而已。
         链接https://stackoverflow.com/questions/2165204/why-does-linkedhashsete-extend-hashsete-and-implement-sete
            AbstractMap的
@@ -31,5 +34,8 @@
          加载因子是表示Hsah表中元素的填满的程度。加载因子越大,填满的元素越多,空间利用率越高，但冲突的机会加大了。
          反之,加载因子越小,填满的元素越少,冲突的机会减小,但空间浪费多了。冲突的机会越大,则查找的成本越高。反之,查找的成本越小。
          因此,必须在 "冲突的机会"与"空间利用率"之间寻找一种平衡与折衷。
+         ，HashMap 提供了自动扩容机制，当元素个数达到数组大小 loadFactor 后会扩大数组的大小，
+         在默认情况下，数组大小为16，loadFactor 为0.75，也就是说当 HashMap 中的元素超过16\0.75=12时，
+         会把数组大小扩展为2*16=32，并且重新计算每个元素在新数组中的位置。
 
 ```
