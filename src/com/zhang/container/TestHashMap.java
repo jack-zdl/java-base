@@ -125,6 +125,15 @@ class RunnableDemo implements Runnable {
 			hashMap.put(""+b,b+1);
 		}
 		System.out.println(hashMap);
+		/**
+		 * hashmap的安全迭代方式
+		 */
+		Iterator iter = hashMap.entrySet().iterator();
+		while (iter.hasNext()) {
+			Map.Entry entry = (Map.Entry) iter.next();
+			Object key = entry.getKey();
+			Object val = entry.getValue();
+		}
 	}
 
 }

@@ -3,11 +3,21 @@
 数组创建就固定了长度，不能改变长度，但是连接长度可以改变，可以动态增加节点数据。
 所以数组查询比较方便，链表的修改比较方便。
 ```
+```
 		2.1ConcurrentHashMap的锁分段技术 
 		2.2ConcurrentHashMap的读是否要加锁，为什么 
 		2.3ConcurrentHashMap的迭代器是强一致性的迭代器还是弱一致性的迭代器 
 		2.4HashMap和HashTable的区别：
 		    HashMap是线程不安全的，并且可以接受null值作为他的key和value。
+```
+## 基础知识了解
+``` 
+    fail-fast迭代器。
+    HashMap的迭代器(Iterator)
+    Hashtable的enumerator迭代器
+    
+```
+
 ## HashMap
 ```
     **基于哈希表的Map接口实现**
@@ -46,12 +56,24 @@
             Object key = entry.getKey();
             Object val = entry.getValue();
             }
+         第二种
+            　Map map = new HashMap();
+            　Iterator iter = map.keySet().iterator();
+            　while (iter.hasNext()) {
+            　Object key = iter.next();
+            　Object val = map.get(key);
+            　}
+        另一个区别是HashMap的迭代器(Iterator)是fail-fast迭代器，而Hashtable的enumerator迭代器不是fail-fast的。
+    3.8 HashMap不能保证随着时间的推移Map中的元素次序是不变的。
+    3.9 线程安全 Map m = Collections.synchronizeMap(hashMap);
 ```
 ## HashTable
 ```
     相对HashMap的是线程安全不接受null作为key和value.
+    因为他是线程安全。也是synchronized，所以单线程比hashmap慢。
+    所以HahTable几乎每个方法都是synchronized方法。
 ```
 ## ConcurrentHashMap
 ```
-    它是HashTable的替代品。它比HashTable的扩展性更好。
+    它是HashTable的替代品。它比HashTable的扩展性更好。线程安全而且速度快。
 ```
