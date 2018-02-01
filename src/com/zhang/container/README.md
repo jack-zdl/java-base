@@ -19,7 +19,7 @@
         为什么继承AbstractMap，还要继承Map接口。为了Class类的getInterfaces这个方法的确不能获取到父类实现的接口，
         如果不写上实现Map接口，这个方法返回的数组中就没有Map.class。
         真实的答案是一个误会而已。
-        链接https://stackoverflow.com/questions/2165204/why-does-linkedhashsete-extend-hashsete-and-implement-sete
+    链接https://stackoverflow.com/questions/2165204/why-does-linkedhashsete-extend-hashsete-and-implement-sete
            AbstractMap的
               size()方法来测量他的长度。
               isEmpty()是否为空
@@ -32,7 +32,8 @@
          HashMap(int initialCapacity)传递初始化容量，HashMap()按照初始化创建。
          HashMap(Map<? extends K, ? extends V> m) 传入一个Map集合
          加载因子是表示Hsah表中元素的填满的程度。加载因子越大,填满的元素越多,空间利用率越高，但冲突的机会加大了。
-         反之,加载因子越小,填满的元素越少,冲突的机会减小,但空间浪费多了。冲突的机会越大,则查找的成本越高。反之,查找的成本越小。
+         反之,加载因子越小,填满的元素越少,冲突的机会减小,但空间浪费多了。冲突的机会越大,则查找的成本越高。
+         反之,查找的成本越小。
          因此,必须在 "冲突的机会"与"空间利用率"之间寻找一种平衡与折衷。
          ，HashMap 提供了自动扩容机制，当元素个数达到数组大小 loadFactor 后会扩大数组的大小，
          在默认情况下，数组大小为16，loadFactor 为0.75，也就是说当 HashMap 中的元素超过16\0.75=12时，
