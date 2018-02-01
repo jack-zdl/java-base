@@ -12,12 +12,14 @@
 ```
 ## 基础知识了解
 ``` 
-    fail-fast迭代器。
-    HashMap的迭代器(Iterator)
-    Hashtable的enumerator迭代器
-    
+fail-fast迭代器。 
+  fail-fast 机制是java集合(Collection)中的一种错误机制。当多个线程对同一个集合的内容进行操作时，就可能会产生fail-fast事件。
+  例如：当某一个线程A通过iterator去遍历某集合的过程中，若该集合的内容被其他线程所改变了；
+  那么线程A访问集合时，就会抛出ConcurrentModificationException异常，产生fail-fast事件。
+HashMap的迭代器(Iterator)
+Hashtable的enumerator迭代器,
+速度最快的CHM,ConcurrentHashMap.
 ```
-
 ## HashMap
 ```
     **基于哈希表的Map接口实现**
@@ -75,5 +77,8 @@
 ```
 ## ConcurrentHashMap
 ```
+    一般你需要线程安全的Map的时候一般使用ConcurrentHashMap.
+    ConcurrentHashMap是线程安全的HashMap的实现。
     它是HashTable的替代品。它比HashTable的扩展性更好。线程安全而且速度快。
+   
 ```
