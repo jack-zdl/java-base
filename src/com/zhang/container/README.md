@@ -37,5 +37,20 @@
          ，HashMap 提供了自动扩容机制，当元素个数达到数组大小 loadFactor 后会扩大数组的大小，
          在默认情况下，数组大小为16，loadFactor 为0.75，也就是说当 HashMap 中的元素超过16\0.75=12时，
          会把数组大小扩展为2*16=32，并且重新计算每个元素在新数组中的位置。
-
+    3.7 安全遍历HashMap
+            Map map = new HashMap();
+            Iterator iter = map.entrySet().iterator();
+            while (iter.hasNext()) {
+            Map.Entry entry = (Map.Entry) iter.next();
+            Object key = entry.getKey();
+            Object val = entry.getValue();
+            }
+```
+## HashTable
+```
+    相对HashMap的是线程安全不接受null作为key和value.
+```
+## ConcurrentHashMap
+```
+    它是HashTable的替代品。它比HashTable的扩展性更好。
 ```
