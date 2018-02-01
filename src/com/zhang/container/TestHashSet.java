@@ -1,6 +1,5 @@
 package com.zhang.container;
 
-import org.junit.Test;
 
 /**@author  zhangdelei
  * @data 2017��5��10������9:19:55
@@ -9,7 +8,6 @@ import org.junit.Test;
 
 public class TestHashSet {
 	
-	@Test
 	public void test(){
 		
 	}

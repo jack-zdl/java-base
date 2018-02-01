@@ -1,6 +1,5 @@
 package com.zhang.container;
 
-import org.junit.Test;
 import org.omg.CORBA.PUBLIC_MEMBER;
 
 import java.math.BigDecimal;
@@ -19,7 +18,6 @@ class TestBigDecimal {
     /**
      * 测试BigDecimal损失精度的案例
      */
-    @Test
     public void test1(){
         BigDecimal errora = new BigDecimal(99999.99);
         System.out.println(errora);
@@ -28,7 +26,6 @@ class TestBigDecimal {
         System.out.println(errorc);
     }
 
-    @Test
     public void test2(){
         Double d = 9999.99999;
         BigDecimal a = new BigDecimal(d.toString());
@@ -50,7 +47,6 @@ class TestBigDecimal {
     /**
      * 使用自定义方法，解决double损失精度问题
      */
-    @Test
     public void test3(){
         double d = 301353.05;//5898895455898954895989;
         System.out.println(doubleToBigDecimal(d));

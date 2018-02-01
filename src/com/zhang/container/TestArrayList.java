@@ -5,7 +5,6 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
-import org.junit.Test;
 
 /**@author  zhangdelei
  * @data 2017��3��22������9:44:58
@@ -21,7 +20,6 @@ import org.junit.Test;
 
 public class TestArrayList {
 	
-     @Test
      public void TestCollectionToArrayList(){
     	 Collection array = new ArrayList();
     	 array.add(2);

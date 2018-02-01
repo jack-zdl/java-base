@@ -1,7 +1,6 @@
 package com.zhang.container;
 
 
-import org.junit.Test;
 
 import java.util.Map;
 import java.util.TreeMap;
@@ -12,7 +11,6 @@ public class TestTreeMap {
 	 *@Description TODO
 	 */
 
-	@Test
 	public void testTree(){
 		System.out.println("测试TreeMap");
 		Map treeMap = new TreeMap();

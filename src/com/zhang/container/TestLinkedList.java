@@ -4,8 +4,6 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.junit.Test;
-
 /**@author  zhangdelei
  * @data 2017��3��22������9:07:17
  *@Description ��������������˫���� ����ǻ���˫������
@@ -15,7 +13,6 @@ import org.junit.Test;
 
 public  class TestLinkedList {
 	
-	@Test
 	public void testListLinkedList(){
 		List linkedList = new LinkedList();
 		//һ��ʹ��list�ӿڵķ���
@@ -23,7 +20,6 @@ public  class TestLinkedList {
 		System.out.println("����="+linkedList);
 	}
 	  
-	@Test
 	public void testLink(){
 		 LinkedList linkedList = new LinkedList(); 
 		 linkedList.addFirst("1");

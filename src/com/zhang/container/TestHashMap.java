@@ -125,7 +125,6 @@ class RunnableDemo implements Runnable {
 			hashMap.put(""+b,b+1);
 		}
 		System.out.println(hashMap);
-
 	}
 
 }

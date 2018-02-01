@@ -2,7 +2,6 @@ package com.zhang.container;
 
 import java.util.Stack;
 
-import org.junit.Test;
 
 /**@author  zhangdelei
  * @data 2017��5��10������9:18:51
@@ -13,7 +12,6 @@ import org.junit.Test;
 
 public class TestStack {
 	
-	@Test
 	public void test(){
 		Stack stack = new Stack();
 		stack.push("1"); //���Ԫ�ؽ���Ͱ
