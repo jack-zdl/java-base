@@ -19,6 +19,8 @@ fail-fast迭代器。
 HashMap的迭代器(Iterator)
 Hashtable的enumerator迭代器,
 速度最快的CHM,ConcurrentHashMap.
+volatile 关键字  用volatile修饰的变量，线程在每次使用变量的时候，都会读取变量修改后的最的值。
+transient  关键字 序列化时不进行序列化
 ```
 ## HashMap
 ```
