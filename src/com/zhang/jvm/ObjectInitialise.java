@@ -31,32 +31,52 @@ class Initialise {
 /**
  * 外部类
  */
+class  StaticOutside{
+    public static  String  parentAttri = "StaticOutside";
+
+    static {
+        parentAttri = "StaticOutside static";
+        System.out.println("7   "+parentAttri);
+    }
+
+    {
+        parentAttri = "StaticOutside not static";
+        System.out.println("8  "+parentAttri);
+    }
+
+    StaticOutside(){
+        parentAttri = "StaticOutside 构造函数";
+        System.out.println("9  "+parentAttri);
+    }
+}
+
 class  Outside{
     public static  String  parentAttri = "outside";
 
     static {
         parentAttri = "outside static";
-        System.out.println("7   "+parentAttri);
+        System.out.println("10   "+parentAttri);
     }
 
     {
         parentAttri = "outside not static";
-        System.out.println("8  "+parentAttri);
+        System.out.println("11  "+parentAttri);
     }
 
     Outside(){
         parentAttri = "outside 构造函数";
-        System.out.println("9  "+parentAttri);
+        System.out.println("12  "+parentAttri);
     }
 }
+
 
 /**
  * 作为子类
  */
 public class ObjectInitialise extends Initialise{ //extends Initialise
     public static  String  parentAttri = "subclass ";
-    public  Outside out = new Outside();
-
+    public static StaticOutside out = new StaticOutside();
+    public Outside outside = new Outside();
     static {
         parentAttri = "subclass static";
         System.out.println("3  ObjectInitialise-static---subclass="+parentAttri);
