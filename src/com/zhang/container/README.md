@@ -82,5 +82,19 @@ transient  关键字 序列化时不进行序列化
     一般你需要线程安全的Map的时候一般使用ConcurrentHashMap.
     ConcurrentHashMap是线程安全的HashMap的实现。
     它是HashTable的替代品。它比HashTable的扩展性更好。线程安全而且速度快。
-   
+   BAT面试题：currentHashMap是如何保证线程安全？
+         ConcurrentHashMap 是建立在 Java 内存模型基础上的。
+            java内存模型
+                1 重排序
+                2 内存可见性
+                3 Happens-before 关系
+         依赖Segment属性来保证锁的功能，Segment是继承了ReentrantLock拥有锁的能力。
+   BAT面试题：currentHashMap是如何保证速度?
+        1 用分离锁实现多个线程间的并发写操作，get没有加锁，put时加锁。
+        2 用 HashEntery 对象的不变性来降低读操作对加锁的需求
+            在访问某个节点时，这个节点之后的链接不会被改变。这个特性可以大大降低处理链表时的复杂性。
+            HashEntry 类的 value 域被声明为 Volatile 型，Java 的内存模型可以保证：某个写线程对 value 域的写入
+            马上可以被后续的某个读线程“看”到。在 ConcurrentHashMap 中，不允许用 unll 作为键和值，当读线程读到某个
+             HashEntry 的 value 域的值为 null 时，便知道产生了冲突——发生了重排序现象，需要加锁后重新读入这个
+             value 值。这些特性互相配合，使得读线程即使在不加锁状态下，也能正确访问 ConcurrentHashMap。
 ```
