@@ -3,11 +3,29 @@
 这是一篇自由练习的java学习开源项目，为了让大家更加系统掌握java学习，更快速成长在大牛的道路上，看看你我要学习多少基础的东西。来和我一起学习吧。 基础知识包括：
 
 > 1 基本语法： 
-
-+	1.1static的意义
-+	1.2volatile关键字的底层实现原理。等一些基础的知识。 
-+	1.3java本身带有的注解
-+   1.4final finally finlise的区别
++   java基础类型
+```
+    byte 8位 -128-127
+    short 16位
+    int  32
+    long 64
+    float 32位  0.0f
+    double 0.0d
+    boolean false
+    char 16 位 Unicode 字符；最小值是 \u0000（即为0）； 最大值是 \uffff（即为65,535）；
+```
++	static的意义
+``` 
+   1 一般使用静态属性，静态方法。  指明了这些变量和方法在内存中的“固定位置”。 
+```
++	volatile关键字的底层实现原理。等一些基础的知识。 
+```
+   线程可见。
+```
++	java本身带有的注解
+```
+```
++   final finally finlise的区别
 ```
 		@SuppressWarnings("unchecked")
 		告诉编译器忽略 unchecked 警告信息，如使用List，ArrayList等未进行参数化产生的警告信息。
@@ -23,14 +41,14 @@
 ·   	@SuppressWarnings(value={"unchecked", "deprecation"})
 		等同于@SuppressWarnings("unchecked", "deprecation")
 ```
-+	1.4	java中具体执行的代码必须放进代码块中，和方法中
++   java中具体执行的代码必须放进代码块中，和方法中
 ```
 		int a  = 5 ;
 		{ 
 		 a = a + 5;//这是执行代码，不放在代码块中，方法中，类实例化后无法执行。
 		}
 ```
-+   1.5 String讲解
++   String讲解
 ```
     1 String是不能被继承的，因为被final修饰，详情查询final的用法。
     2 String有二个属性，private final char[] value; private int hash;
@@ -38,7 +56,7 @@
     // 程序编译期即加载完成对象s1为"ab"，JVM自有优化， 效率并不差
     String s1 = "a" + "b";  
 ```
-+   1.6 Serializable接口
++   Serializable接口
 ```
     1 序列化问题
 ```
