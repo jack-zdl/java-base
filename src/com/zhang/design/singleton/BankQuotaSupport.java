@@ -3,28 +3,6 @@ package com.zhang.design.singleton;
 import java.math.BigDecimal;
 import java.util.Date;
 
-//                   _ooOoo_
-//                  o8888888o
-//                  88" . "88
-//                  (| -_- |)
-//                  O\  =  /O
-//               ____/`---'\____
-//             .'  \\|     |//  `.
-//            /  \\|||  :  |||//  \
-//           /  _||||| -:- |||||-  \
-//           |   | \\\  -  /// |   |
-//           | \_|  ''\---/''  |   |
-//           \  .-\__  `-`  ___/-. /
-//         ___`. .'  /--.--\  `. . __
-//      ."" '<  `.___\_<|>_/___.'  >'"".
-//     | | :  `- \`.;`\ _ /`;.`/ - ` : | |
-//     \  \ `-.   \_ __\ /__ _/   .-` /  /
-// ======`-.____`-.___\_____/___.-`____.-'======
-//                   `=---='
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-//         佛祖保佑       永无BUG
-//  本模块已经经过开光处理，绝无可能再产生bug
-// =============================================
 /**
  * 银行给核心企业授信额度的封装类
  * <p>singleton model</p>
@@ -34,8 +12,7 @@ import java.util.Date;
  */
 public
 class BankQuotaSupport {
-//    public static
-//    Logger log(){
+//    public static Logger log(){
 //        return LogContext.getInstance().getLogger();
 //    }
 //
@@ -61,34 +38,34 @@ class BankQuotaSupport {
 //        bankQuotaDao = new BankQuotaDao(session);
 //        bankQuotaOpsDao = new BankQuotaOpsDao(session);
 //    }
-//
-//    /**
-//     * 获得唯一实例
-//     * <p>
-//     * signleton model ,support one object ,
-//     *
-//     * </p>
-//     * @return
-//     */
+
+    /**
+     * 获得唯一实例
+     * <p>
+     * signleton model ,support one object ,
+     *
+     * </p>
+     * @return
+     */
 //    public static BankQuotaSupport getInstance(IDBSession session) {
 //        if(quotaInstance==null){
 //            quotaInstance = new BankQuotaSupport(session);
 //        }
 //        return quotaInstance;
 //    }
-//
-//    /**
-//     *
-//     * @param userId
-//     * @param orgId
-//     * @param bankId
-//     * @param coreCompanyId
-//     * @param operateflag
-//     * @param money
-//     * @param sign
-//     * @param description
-//     * @throws Exception
-//     */
+
+    /**
+     *
+     * @param userId
+     * @param orgId
+     * @param bankId
+     * @param coreCompanyId
+     * @param operateflag
+     * @param money
+     * @param sign
+     * @param description
+     * @throws Exception
+     */
 //    public static void dealBankQuota(String userId, String orgId,String bankId,String coreCompanyId, String operateflag , BigDecimal money ,String sign,String description) throws Exception {
 //        BankQuota bankQuota = bankQuotaDao.getBankQuota(bankId,coreCompanyId);
 //        if(bankQuota == null){
