@@ -19,6 +19,14 @@
 >  考点
     
     Spring的单例模式和java的单例模式？
+    在spring的单例模式，就是IOC容器模式中自动依赖注入的bean,这个bean时单例模式，所以要考虑线程安全。
+        但是我们可以生成多个IOC容器。但是每个IOC容器生成的bean的都是单例模式。
+    在java的单例模式，java中只有一个jvm,jvm中某个class只有一个实例。
+    1 对于Spring中实现Singleton模式，是以IOC容器为单位（就是说在这个容器里面bean实现Singleton）
+    一个JVM可能有多个IOC容器，而在这个容器里实现了singleton bean。 
+    而Java中实现Singleton模式而言，只有一个JVM，jvm中某个class只有一个实例
+    2 singleton模式中，singleton的class在整个JVM中只有一个instance， 
+    Spring的Bean，你可以一个class配置多个Bean，这个class就有了多个instance。
     
         
 		
