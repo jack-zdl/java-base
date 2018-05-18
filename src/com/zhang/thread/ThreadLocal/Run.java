@@ -6,8 +6,7 @@ package com.zhang.thread.ThreadLocal;
  * @date 2017/9/21 10:32
  * @description 执行方法 测试所有线程得到的东西是否一样
  */
-public
-class Run {
+public  class Run {
     public static ThreadLocalExt t1 = new ThreadLocalExt();
 
     public static void main(String[] args) {
