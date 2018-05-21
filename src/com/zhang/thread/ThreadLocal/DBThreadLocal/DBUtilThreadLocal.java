@@ -14,7 +14,7 @@ public class DBUtilThreadLocal {
     private static final String driver = "com.mysql.jdbc.Driver";
     private static final String url = "jdbc:mysql//localhost:3306/demo";
     private static final String username = "root";
-    private static final String password = "root";
+    private static final String password = "";
 
 
     private static ThreadLocal<Connection> connectionThreadLocal = new ThreadLocal<>();
