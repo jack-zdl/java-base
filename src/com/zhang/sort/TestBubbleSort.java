@@ -25,6 +25,8 @@ public class TestBubbleSort {
                 }
             }
         }
-
+        for (int j = 0 ; j < size-1; j ++){
+            System.out.println(numbers[j]);
+        }
     }
 }

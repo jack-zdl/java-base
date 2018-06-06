@@ -19,22 +19,27 @@ public class TestFastSort {
      */
     public static int getMiddle(int[] numbers, int low,int high)
     {
-        int temp = numbers[low]; //数组的第一个作为中轴
+        //数组的第一个作为中轴
+        int temp = numbers[low];
         while(low < high)
         {
             while(low < high && numbers[high] >= temp)
             {
                 high--;
             }
-            numbers[low] = numbers[high];//比中轴小的记录移到低端
+            //比中轴小的记录移到低端
+            numbers[low] = numbers[high];
             while(low < high && numbers[low] < temp)
             {
                 low++;
             }
-            numbers[high] = numbers[low] ; //比中轴大的记录移到高端
+            //比中轴大的记录移到高端
+            numbers[high] = numbers[low] ;
         }
-        numbers[low] = temp ; //中轴记录到尾
-        return low ; // 返回中轴的位置
+        //中轴记录到尾
+        numbers[low] = temp ;
+        // 返回中轴的位置
+        return low ;
     }
 
     /**
@@ -63,7 +68,8 @@ public class TestFastSort {
      */
     public static void quick(int[] numbers)
     {
-        if(numbers.length > 0)   //查看数组是否为空
+        //查看数组是否为空
+        if(numbers.length > 0)
         {
             quickSort(numbers, 0, numbers.length-1);
         }
