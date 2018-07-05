@@ -1,6 +1,7 @@
 # jvm
 ## 对象加载顺序 see ObjectInitialise.JAVA
 ```
+    static变量 --  其他成员变量  --  构造函数 三者的调用先后顺序：
     父类静态变量- 父类静态代码块-子类静态变量-子类静态代码块-父类非静态变量-父类非静态代码块-父类构造函数-子类非静态代码块-子类构造函数。
            自己测试 -- 父类静态代码块-静态属性对象的静态代码块--静态属性对象的非静态代码块--静态属性对象的构造函数--
            子类（自己类）的静态方法--父类非静态代码--父类的构造函数--属性对象的静态代码块--属性对象的非静态代码--
@@ -88,6 +89,16 @@
         ·方法区中类静态属性引用的对象
         ·方法区中常量引用对象
         ·本地方法栈中JNI引用对象
+```
+## 双亲委派原则
+```
+类加载器===双亲委派原则
+启动类加载器
+Bootstrap ClassLoader 最顶层的加载类，主要加载核心类库，%JRE_HOME%\lib下的rt.jar、resources.jar、charsets.jar和class等。另外需要注意的是可以通过启动jvm时指定-Xbootclasspath和路径来改变Bootstrap ClassLoader的加载目录。比如java -Xbootclasspath/a:path被指定的文件追加到默认的bootstrap路径中。我们可以打开我的电脑，在上面的目录下查看，看看这些jar包是不是存在于这个目录。 
+扩展的类加载器
+Extention ClassLoader 加载目录%JRE_HOME%\lib\ext目录下的jar包和class文件。还可以加载-D java.ext.dirs选项指定的目录。
+应用程序类加载器 
+Appclass Loader也称为SystemAppClass 加载当前应用的classpath的所有类。
 ```
 	    
 
