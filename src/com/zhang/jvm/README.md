@@ -18,6 +18,16 @@
     12  outside 构造函数
     4  Initialise----subclass=subclass not static
     6  Initialise----parent=subclass 构造函数
+    加载Super的静态变量
+    加载Super的静态块
+    加载Sub的静态变量
+    加载Sub的静态块
+    加载Super的实例变量
+    加载Super的普通块
+    加载Super的构造器
+    加载Sub的实例变量
+    加载Sub的普通块
+    加载Sub的构造器
 ```
 ##  类加载机制
 ```
@@ -94,7 +104,9 @@
 ```
 类加载器===双亲委派原则
 启动类加载器
-Bootstrap ClassLoader 最顶层的加载类，主要加载核心类库，%JRE_HOME%\lib下的rt.jar、resources.jar、charsets.jar和class等。另外需要注意的是可以通过启动jvm时指定-Xbootclasspath和路径来改变Bootstrap ClassLoader的加载目录。比如java -Xbootclasspath/a:path被指定的文件追加到默认的bootstrap路径中。我们可以打开我的电脑，在上面的目录下查看，看看这些jar包是不是存在于这个目录。 
+Bootstrap ClassLoader 最顶层的加载类，主要加载核心类库，%JRE_HOME%\lib下的rt.jar、resources.jar、charsets.jar和class等。
+另外需要注意的是可以通过启动jvm时指定-Xbootclasspath和路径来改变Bootstrap ClassLoader的加载目录。
+比如java -Xbootclasspath/a:path被指定的文件追加到默认的bootstrap路径中。我们可以打开我的电脑，在上面的目录下查看，看看这些jar包是不是存在于这个目录。
 扩展的类加载器
 Extention ClassLoader 加载目录%JRE_HOME%\lib\ext目录下的jar包和class文件。还可以加载-D java.ext.dirs选项指定的目录。
 应用程序类加载器 
