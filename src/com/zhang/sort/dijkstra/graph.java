@@ -2,15 +2,20 @@ package com.zhang.sort.dijkstra;
 
 public class graph {
 
-    public Vertex[] vertexList; //存放点的集合
+    //存放点的集合
+    public Vertex[] vertexList; //线程安全
+
+    //点个数
+    public int vertexNum;
+
+    //边个数
+    public int edgeLength;
+
     public graph(int vertexNum){
         this.vertexNum=vertexNum;
         vertexList=new Vertex[vertexNum];
     }
-    //点个数
-    public int vertexNum;
-    //边个数
-    public int edgeLength;
+
     public void initVertext(){
         for(int i=0;i<vertexNum;i++){
             Vertex vertext=new Vertex();
@@ -19,6 +24,7 @@ public class graph {
             //System.out.println("i"+vertexList[i]);
         }
     }
+
     //针对x节点添加边节点y
     public void addEdge(int x,int y,int weight) {
         Edge edge = new Edge();

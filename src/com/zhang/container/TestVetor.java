@@ -13,7 +13,11 @@ public class TestVetor {
 	
 	public void vectorTest(){
 		List vectorList = new Vector();
-		//һ����add��remove��get,iterator,contains
+		vectorList.add("1");
+		vectorList.add("2");
+		vectorList.add("3");
+
+
 	}
 	
 }
