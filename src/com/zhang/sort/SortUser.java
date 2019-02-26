@@ -25,4 +25,13 @@ public class SortUser {
         }
 
     }
+
+    public int baseConversion(int n){
+        int module = n % 3;
+        n = n /3;
+//        if(){
+//
+//        }
+        return 1;
+    }
 }
