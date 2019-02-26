@@ -13,6 +13,7 @@ package com.zhang.thread;
 public class JavaTestDeadLock implements Runnable {
 	public int flag = 1;
 	static Object o1 = new Object (), o2=new Object();
+
 	@Override
 	public void run() {
 		/**
