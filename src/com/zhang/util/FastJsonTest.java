@@ -31,12 +31,12 @@ public class FastJsonTest{
 //        TypeUtils.compatibleWithJavaBean =true;
 //        JSONObject jsonObject = new JSONObject();
 ////        com.alibaba.fastjson.util.TypeUtils.compatibleWithJavaBean = true;
-////        FastJsonConfig fastJsonConfig = new FastJsonConfig();
-////        fastJsonConfig.setSerializerFeatures(
-////                SerializerFeature.DisableCircularReferenceDetect,
-////                SerializerFeature.WriteMapNullValue,
-////                SerializerFeature.WriteNullStringAsEmpty
-////        );
+        FastJsonConfig fastJsonConfig = new FastJsonConfig();
+        /*fastJsonConfig.setSerializerFeatures(
+                SerializerFeature.DisableCircularReferenceDetect,
+                SerializerFeature.WriteMapNullValue,
+                SerializerFeature.WriteNullStringAsEmpty
+        );*/
 //        String jsonStr = "{\"code\":0,\"message\":\"\",\"result\":{\"facts\":{\"ip\":{\"aCUN_ONE_MIN\":0,\"aCUN_TEN_MIN\":0}},\"level\":0}}";
 //        jsonObject  = JSONObject.parseObject(jsonStr);
 //        System.out.println(jsonObject.get("result"));
@@ -47,10 +47,12 @@ public class FastJsonTest{
 //        //BigDecimalObject = JSON.toJSON("81833e8936");
 //        System.out.println("=="+BigDecimalObject.getClass().equals(BigDecimal.class));
 //        System.out.println(""+BigDecimalObject);
-        String s = "{\"idc1\":[\"default\"],\"idc2\":[\"default\"]}";
-
-        Map<String, List<String>> zoneGroupMap = JSON.parseObject(s, zoneGroupListRef);
-        System.out.println(zoneGroupMap.keySet());
+//        String s = "{\"idc1\":[\"default\"],\"idc2\":[\"default\"]}";
+//
+//        Map<String, List<String>> zoneGroupMap = JSON.parseObject(s, zoneGroupListRef);
+//        System.out.println(zoneGroupMap.keySet());
+        System.out.println("F".equals("T"));
+        System.out.println("F".equals("F"));
     }
 
     public class TestClass{

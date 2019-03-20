@@ -77,8 +77,16 @@ public class TestHashMap {
 		hashMap.put("9", "9");
 		hashMap.put("10", "10");
 //		hashMap.get("key");
-		
+		hashMap.remove("1");
 	}
+
+	// int 32 位
+	public static void main(String[] args) {
+		System.out.println(5>>3);//结果是0  右移
+		System.out.println(-5>>3);//结果是-1  右移
+		System.out.println(-5>>>3);//结果是536870911
+	}
+
 
 
 
