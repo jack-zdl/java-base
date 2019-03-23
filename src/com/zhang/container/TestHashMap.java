@@ -76,7 +76,7 @@ public class TestHashMap {
 		hashMap.put("8", "8");
 		hashMap.put("9", "9");
 		hashMap.put("10", "10");
-//		hashMap.get("key");
+		hashMap.get("key");
 		
 	}
 
