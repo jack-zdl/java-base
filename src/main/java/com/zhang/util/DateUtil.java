@@ -190,7 +190,7 @@ public class DateUtil {
     /**
      * 装换时间类型为字符窜类型
      */
-    public static String convertDateToString(Date date, String pattern) throws ParseException {
+    public static String convertDateToString(Date date, String pattern) {
         SimpleDateFormat sf = new SimpleDateFormat(pattern);
         sf.setLenient(false);
         return sf.format(date);
@@ -252,7 +252,7 @@ public class DateUtil {
         return getBeforeDate(convertStringTODate(date, DateUtil.DATE_PATTERN_YYYY_MM_DD));
     }
 
-    public static Date getBeforeDate(Date date) throws ParseException {
+    public static Date getBeforeDate(Date date) {
         return new Date(date.getTime() - 1000 * 3600 * 24);
     }
 
@@ -494,7 +494,7 @@ public class DateUtil {
     }
 
 
-    public static Calendar getCurrentDay() throws ParseException {
+    public static Calendar getCurrentDay() {
         Calendar cal = Calendar.getInstance();
         return cal;
 
@@ -903,7 +903,7 @@ public class DateUtil {
     public static Date getFirstDateOfMonth(Date date) {
         Calendar c = Calendar.getInstance();
         c.setTime(date);
-        c.set(c.DAY_OF_MONTH, 1);
+        c.set(Calendar.DAY_OF_MONTH, 1);
         return c.getTime();
     }
 
@@ -961,8 +961,8 @@ public class DateUtil {
     public static Date getLastDateOfMonth(Date date) {
         Calendar c = Calendar.getInstance();
         c.setTime(date);
-        c.set(c.DAY_OF_MONTH, 1);
-        c.roll(c.DAY_OF_MONTH, -1);
+        c.set(Calendar.DAY_OF_MONTH, 1);
+        c.roll(Calendar.DAY_OF_MONTH, -1);
         // 每月拥有天数
         return c.getTime();
     }

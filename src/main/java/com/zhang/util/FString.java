@@ -218,7 +218,7 @@ public class FString {
         increase *= (max < 0 ? 16 : (max > 64 ? 64 : max));
         StringBuilder buf = new StringBuilder(text.length() + increase);
         while (end != INDEX_NOT_FOUND) {
-            buf.append(text.substring(start, end)).append(replacement);
+            buf.append(text, start, end).append(replacement);
             start = end + replLength;
             if (--max == 0) {
                 break;
@@ -262,11 +262,7 @@ public class FString {
      */
     public static boolean isFind(String source, String target){
         int index = source.indexOf(target);
-        if(index == -1){
-            return false;
-        } else{
-            return true;
-        }
+        return index != -1;
     }
 
     public static String listToString(List<String> list, String separator){

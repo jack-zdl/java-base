@@ -1,6 +1,5 @@
 package com.zhang.io.nio;
 
-import main.zhang.thread.ThreadLocal.Run;
 
 import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.io.IOException;
@@ -118,7 +117,6 @@ public class MultiplexerTimeServer implements Runnable {
                     key.channel();
                     sc.close();
                 }else {
-                    ;
                 }
             }
         }

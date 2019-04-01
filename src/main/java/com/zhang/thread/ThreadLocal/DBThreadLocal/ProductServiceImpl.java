@@ -1,8 +1,5 @@
 package com.zhang.thread.ThreadLocal.DBThreadLocal;
 
-import org.omg.CORBA.CODESET_INCOMPATIBLE;
-import org.omg.CORBA.PRIVATE_MEMBER;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -10,7 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * 功能说明: 自己写一个事务，二条sql语句，执行与回滚   <br>
+ * 功能说明: 自己写一个事务，二条sql语句，执行与回滚<br>
  * 系统版本: 2.0 <br>
  * 开发人员: zhangdl <br>
  * 开发时间:2018/5/19 20:57<br>

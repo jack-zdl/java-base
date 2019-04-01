@@ -12,7 +12,7 @@ import java.net.Socket;
  * <br>
  */
 public class TimeServer {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         int port = 9898;
         if(args != null && args.length > 0){
             try {

@@ -22,7 +22,6 @@ public class DBUtil {
      */
     private static Connection conn = null;
 
-    private static ThreadLocal<Connection> connectionThreadLocal = new ThreadLocal<>();
 
     // 获取连接
     public static Connection getConnection(){

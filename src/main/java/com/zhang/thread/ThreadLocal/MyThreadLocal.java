@@ -14,7 +14,7 @@ import java.util.Map;
  */
 public class MyThreadLocal<T> {
 
-    private Map<Thread,T> container = Collections.synchronizedMap(new HashMap<Thread,T>());
+    private Map<Thread,T> container = Collections.synchronizedMap(new HashMap<>());
 
     public void set(T value){
         container.put(Thread.currentThread(),value);

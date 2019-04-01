@@ -1,6 +1,5 @@
 package com.zhang.jvm;
 
-import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.OutputStreamWriter;
@@ -16,7 +15,6 @@ import java.nio.charset.Charset;
 public
 class BootstrapClassLoaderInitialise {
 
-    @Test
 //    public void Test(){
 //        CityDto cityDto = new CityDto();
 //        cityDto.setCityName("T3\u001cA\u001d");

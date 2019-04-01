@@ -61,16 +61,16 @@ public class JavaExecutor {
                 }
             });
             final SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
-            Future<String> future =  ((ExecutorService) executorService).submit(new CallableTask());
+            Future<String> future =  executorService.submit(new CallableTask());
             System.out.println("获取callable任务的结果：" + future.get() + "，现在时间是：" + sdf.format(new Date()));
             try {
 //                ((ExecutorService) executorService).shutdown();
 
                 countDownLatch.await();
-                boolean isShutdown = ((ExecutorService) executorService).isShutdown();
+                boolean isShutdown = executorService.isShutdown();
                 System.out.println("线程池是否已经关闭"+isShutdown);
 
-                if (!((ExecutorService) executorService).awaitTermination(1L,TimeUnit.SECONDS)) {
+                if (!executorService.awaitTermination(1L,TimeUnit.SECONDS)) {
                     System.out.println("线程池中还有任务在执行，当前时间：" + sdf.format(new Date()));
                 }
                 System.out.println("线程池中已经没有在执行的任务，线程池已完全关闭！");

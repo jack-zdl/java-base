@@ -51,9 +51,8 @@ public class TestHashMap {
 				return true;
 			if (o instanceof Map.Entry) {
 				Map.Entry<?,?> e = (Map.Entry<?,?>)o;
-				if (Objects.equals(key, e.getKey()) &&
-						Objects.equals(value, e.getValue()))
-					return true;
+                return Objects.equals(key, e.getKey()) &&
+                        Objects.equals(value, e.getValue());
 			}
 			return false;
 		}

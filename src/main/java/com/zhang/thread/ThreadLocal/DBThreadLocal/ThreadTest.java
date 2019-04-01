@@ -1,5 +1,7 @@
 package com.zhang.thread.ThreadLocal.DBThreadLocal;
 
+import org.junit.Test;
+
 /**
  * 功能说明:    <br>
  * 系统版本: 2.0 <br>
@@ -31,4 +33,13 @@ public class ThreadTest {
             thread.start();
         }
     }
+
+    public void runTest(){
+        for (int i = 0;i < 10;i++){
+            ProductService productService = new ProductServiceImpl();
+            ClientThread thread = new ClientThread(productService);
+            thread.start();
+        }
+    }
+
 }

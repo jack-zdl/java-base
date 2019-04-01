@@ -114,7 +114,6 @@ public class TimeClientHandle implements Runnable{
                         key.cancel();
                         sc.close();
                     }else {
-                        ;
                     }
                 }
             }
