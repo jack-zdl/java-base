@@ -1,6 +1,6 @@
 package com.zhang.io.nio;
 
-import com.zhang.thread.ThreadLocal.Run;
+import main.zhang.thread.ThreadLocal.Run;
 
 import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.io.IOException;

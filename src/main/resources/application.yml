@@ -1,0 +1,8 @@
+server:
+  port: 8080
+  address: localhost
+  tomcat:
+  # tomcat的URI编码
+    uri-encoding: UTF-8
+    # 存放Tomcat的日志、Dump等文件的临时文件夹，默认为系统的tmp文件夹（如：C:\Users\Angel\AppData\Local\Temp）
+    basedir: C:/log

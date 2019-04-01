@@ -31,7 +31,7 @@ public class TestHeapSort {
     private static void heapSort(int[] arr) {
         // 将待排序的序列构建成一个大顶堆
         //第一个非叶子结点 arr.length/2-1=5/2-1=1
-        for (int i = arr.length / 2; i >= 0; i--){
+        for (int i = arr.length / 2 -1; i >= 0; i--){
             heapAdjust(arr, i, arr.length);
         }
         // 初始构建最大堆
@@ -50,6 +50,7 @@ public class TestHeapSort {
 
     /**
      * 构建堆的过程
+     * 其实就是便利所有的非叶子节点，保证
      * @param arr 需要排序的数组
      * @param i 需要构建堆的根节点的序号
      * @param n 数组的长度
