@@ -6,8 +6,8 @@ package com.zhang.thread.ThreadLocal;
  * @version class v1.0
  * @date 2017/9/21 10:16
  */
-public
-class ThreadLocalExt extends ThreadLocal{
+public class ThreadLocalExt extends ThreadLocal{
+    @Override
     protected Object initialValue(){
         return "我是默认值 第一个Get不在为null";
     }
