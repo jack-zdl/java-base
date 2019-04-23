@@ -1,5 +1,7 @@
 package com.zhang.container;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -49,6 +51,13 @@ public class TestArrayList {
     	 
     	 
      }
+
+     @Test
+	public void TestArrayListAddNull(){
+		List<Node> list = new ArrayList<>();
+		list.add(null);
+		System.out.println("===="+list.toString());
+	}
      
      
      
