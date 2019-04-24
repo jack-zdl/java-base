@@ -14,7 +14,7 @@ package com.zhang.sort.topic;
 public class Solution2019423 {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-
+        return l1;
     }
 
     class ListNode {
