@@ -22,9 +22,9 @@ public class Solution2019423 {
      * @param l2
      * @return
      */
-    public  int addTwoNumbers(ListNode l1, ListNode l2) {
+    public  ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
-
+        ListNode node = new ListNode(0);
         if((l1 == null || l1.next == null )&& (l2 == null || l2.next == null)){
             if(l1 == null){
                 l1 = new ListNode(0);
@@ -34,20 +34,21 @@ public class Solution2019423 {
             int a = l1.val+l2.val;
             int  remainder = a % 10 ;
             int result  = a / 10;
-            if(result != 0){
-                l1.next = new ListNode(result);
-            }
-            return remainder;  // 余数
+            node.next = new ListNode(remainder);
+            node.val = result;
+            return node;  // 余数
         }else {
-           int val = addTwoNumbers(l1.next,l2.next);
-            int b = l1.val+l2.val;
+            ListNode val = addTwoNumbers(l1.next,l2.next);
+            int b = val.val + l1.val + l2.val;
            int  remainder = b % 10 ;
            int result  = b / 10;
             if(l1.next == null){
                 l1.next = new ListNode(0);
             }
-           l1 .next.val = val + result ;
-            return remainder;
+            val.val = remainder ;
+            val.next.val = val.next.val +result;
+            node.next = val;
+            return node;
         }
     }
 
@@ -72,8 +73,7 @@ public class Solution2019423 {
 
     @Test
     public void Test(){
-        int result = addTwoNumbers(listNode,l2);
-        listNode.val = result;
+        ListNode result = addTwoNumbers(listNode,l2);
         System.out.println("l1 ="+listNode);
     }
 }
