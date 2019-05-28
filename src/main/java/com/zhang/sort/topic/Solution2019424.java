@@ -24,6 +24,7 @@ public class Solution2019424 {
 
     public int lengthOfLongestSubstring(String s) {
         char[] chars = s.toCharArray();
-            return 0;
+
+        return 0;
     }
 }
