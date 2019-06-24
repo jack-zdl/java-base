@@ -14,10 +14,20 @@ public class TestConcurrentHashMap {
 
 
 
-    public static
-    void main(String[] args) {
+    public static void main(String[] args) {
         ConcurrentHashMap concurrentHashMap = new ConcurrentHashMap();
         concurrentHashMap.put("1","1");
+        concurrentHashMap.put("2","2");
+        concurrentHashMap.put("3","3");
+        concurrentHashMap.put("11","1");
+        concurrentHashMap.put("21","2");
+        concurrentHashMap.put("31","3");
+        concurrentHashMap.put("12","1");
+        concurrentHashMap.put("22","2");
+        concurrentHashMap.put("32","3");
+        concurrentHashMap.put("13","1");
+        concurrentHashMap.put("24","2");
+        concurrentHashMap.put("35","3");
 
     }
 }

@@ -91,11 +91,38 @@ public class JavaExecutor {
         }
     }
 
+    /**
+     * 使用原生的线程池方法
+     */
+    /**
+     * handler
+     * 线程池的饱和策略，当阻塞队列满了，且没有空闲的工作线程，如果继续提交任务，必须采取一种策略处理该任务，线程池提供了4种策略：
+     * 1、AbortPolicy：直接抛出异常，默认策略；
+     * 2、CallerRunsPolicy：用调用者所在的线程来执行任务；
+     * 3、DiscardOldestPolicy：丢弃阻塞队列中靠最前的任务，并执行当前任务；
+     * 4、DiscardPolicy：直接丢弃任务；
+     * 当然也可以根据应用场景实现RejectedExecutionHandler接口，自定义饱和策略，如记录日志或持久化存储不能处理的任务。
+     */
     public void testExecutorService(){
         ExecutorService executorService = Executors.newFixedThreadPool(2);
         ExecutorService executorService1  = new ThreadPoolExecutor(2, 2,
                 0L, TimeUnit.MILLISECONDS,
                 new LinkedBlockingQueue<Runnable>());
+        SearchRequestType request = new SearchRequestType();
+        executorService1.execute(new Runnable() {
+            @Override
+            public void run() {
+                cale(request);
+            }
+        });
+        /**
+         * 队列
+         * 1、ArrayBlockingQueue：基于数组结构的有界阻塞队列，按FIFO排序任务；
+         * 2、LinkedBlockingQuene：基于链表结构的阻塞队列，按FIFO排序任务，吞吐量通常要高于ArrayBlockingQuene；
+         * 3、SynchronousQuene：一个不存储元素的阻塞队列，每个插入操作必须等到另一个线程调用移除操作，否则插入操作一直处于阻塞状态，吞吐量通常要高于LinkedBlockingQuene；
+         * 4、priorityBlockingQuene：具有优先级的无界阻塞队列；
+         */
+
         ThreadFactory threadFactory =  new ThreadFactory(){
             @Override
             public Thread newThread(Runnable r) {
